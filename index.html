@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Sureshot – Colour Prediction</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0b0b14;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 420px;
+            margin: auto;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        img {
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-top: 20px;
+            color: #ff3b30;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #dcdcdc;
+            line-height: 1.6;
+        }
+
+        p1 {
+            color: yellow;
+            font-weight: bold;
+        }
+
+        P2 {
+            color: lime;
+            font-weight: bold;
+        }
+
+        P3 {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .btn {
+            margin-top: 30px;
+            background: red;
+            padding: 16px 20px;
+            border-radius: 12px;
+            display: block;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(46, 204, 113, 0.7);
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .countdown-box {
+            padding: 20px;
+            height: 50px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .countdown-box h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: #2ecc71;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .countdown div {
+            text-align: center;
+        }
+
+        .countdown span {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff3b30;
+        }
+
+        .countdown p {
+            font-size: 14px;
+            color: #dcdcdc;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<script>
+    // Set your countdown date here
+    var countdownDate = new Date(" NOV 20, 2025 23:59:59").getTime();
+
+    var x = setInterval(function () {
+
+        var now = new Date().getTime();
+        var distance = countdownDate - now;
+
+        // Time calculations
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display values
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        // If countdown ends
+        if (distance < 0) {
+            clearInterval(x);
+            document.querySelector(".countdown-box").innerHTML =
+                "<h2>Offer Expired</h2>";
+        }
+
+    }, 1000);
+</script>
+
+<body>
+
+    <div class="container">
+        <h1>MOST DEMANDING CHANNEL</h1>
+        <div class="logo-wrapper">
+            <img src="/Users/shivk/img/img.jpeg" alt="Apex Sureshot Logo">
+        </div>
+        <p> 👉 DAILY <P1>300-500 </P1>FIRE GIFT</p>
+        <P> 👉 UNDER <P2>2 LEVEL </P2> WIN</P>
+        <P> 🔥 10 HAZAR SE JYADA LOGO NE<P3> RECOVER </P3> KR LIYA HAI</P>
+
+
+
+
+        <a class="btn" href="https://t.me/+R2UOHOKLD5EwMWFl" target="_blank">Join Telegram Now</a>
+
+
+    </div>
+
+    <div class="countdown-box">
+        <div class="countdown">
+            <div><span id="days">00</span>
+                <p>Days</p>
+            </div>
+            <div><span id="hours">00</span>
+                <p>Hours</p>
+            </div>
+            <div><span id="minutes">00</span>
+                <p>Minutes</p>
+            </div>
+            <div><span id="seconds">00</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
